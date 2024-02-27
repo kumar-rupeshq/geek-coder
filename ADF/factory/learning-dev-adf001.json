@@ -1,0 +1,9 @@
+{
+	"name": "learning-dev-adf001",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d5ddf182-6eec-4d15-b3b6-85879a8c96e4",
+		"tenantId": "0dd3c580-c3c7-41f5-a0e2-e6e32dc0a616"
+	}
+}

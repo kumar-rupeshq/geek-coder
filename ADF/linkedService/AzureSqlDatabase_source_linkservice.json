@@ -1,0 +1,19 @@
+{
+	"name": "AzureSqlDatabase_source_linkservice",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=sqlserverdev0001.database.windows.net;Initial Catalog=sqldbdev001;User ID=rupesh",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault_linkservice",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "sqldb-dev-password"
+			}
+		}
+	}
+}

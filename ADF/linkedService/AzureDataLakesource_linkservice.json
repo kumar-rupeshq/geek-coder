@@ -1,0 +1,22 @@
+{
+	"name": "AzureDataLakesource_linkservice",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://storagedatalakesource.dfs.core.windows.net",
+			"tenant": "0dd3c580-c3c7-41f5-a0e2-e6e32dc0a616",
+			"servicePrincipalId": "99fae807-25e7-4915-8250-445b90adf42f",
+			"servicePrincipalCredentialType": "ServicePrincipalKey",
+			"servicePrincipalCredential": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault_linkservice",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "data-app-password"
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "aaa",
+					"value": {
+						"value": "@substring('Airport.csv', add(lastIndexOf('Airport.csv', '.'), 1), sub(sub(length('Airport.csv'), lastIndexOf('Airport.csv', '.')),1))",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"variables": {
+			"aa": {
+				"type": "Integer"
+			},
+			"aaa": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2024-02-27T09:29:54Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
