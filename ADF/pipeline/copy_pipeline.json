@@ -219,7 +219,7 @@
 														"type": "Expression"
 													},
 													"dir": {
-														"value": "@concat('date-',formatDateTime(utcnow(),'yyyy-MM-dd'))",
+														"value": "@item().Directory_sink",
 														"type": "Expression"
 													},
 													"filename": {
