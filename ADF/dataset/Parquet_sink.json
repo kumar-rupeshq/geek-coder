@@ -19,10 +19,7 @@
 					"value": "@dataset().filename",
 					"type": "Expression"
 				},
-				"folderPath": {
-					"value": "@formatDateTime(utcNow(),'yyyy-MM-dd')",
-					"type": "Expression"
-				},
+				"folderPath": "sqldata",
 				"fileSystem": "raw"
 			},
 			"compressionCodec": "snappy"
