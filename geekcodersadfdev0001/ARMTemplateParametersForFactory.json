@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "geekcodersadfdev0001"
+		},
+		"AzureDataLakeStorage_Source_properties_typeProperties_url": {
+			"value": "https://gcodersdatalakesource001.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage_Source_properties_typeProperties_tenant": {
+			"value": "0dd3c580-c3c7-41f5-a0e2-e6e32dc0a616"
+		},
+		"AzureDataLakeStorage_Source_properties_typeProperties_servicePrincipalId": {
+			"value": "14ea61e7-df87-4867-bd9c-c9fcc24bd517"
+		},
+		"AzureDataLakeStorage_sink_properties_typeProperties_url": {
+			"value": "https://gcodersdatalaksink001.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage_sink_properties_typeProperties_tenant": {
+			"value": "0dd3c580-c3c7-41f5-a0e2-e6e32dc0a616"
+		},
+		"AzureDataLakeStorage_sink_properties_typeProperties_servicePrincipalId": {
+			"value": "14ea61e7-df87-4867-bd9c-c9fcc24bd517"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://gcoderskeyvaultdev0001.vault.azure.net/"
+		},
+		"AzureSqlDatabase_source_properties_typeProperties_server": {
+			"value": "gcodersdev0001.database.windows.net"
+		},
+		"AzureSqlDatabase_source_properties_typeProperties_database": {
+			"value": "gcoderssourcesqldb_0001"
+		},
+		"AzureSqlDatabase_source_properties_typeProperties_userName": {
+			"value": "rupesh"
+		},
+		"RestService_source_properties_typeProperties_url": {
+			"value": "https://airlabs.co"
+		}
+	}
+}
