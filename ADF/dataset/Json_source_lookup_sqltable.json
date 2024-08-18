@@ -1,0 +1,39 @@
+{
+	"name": "Json_source_lookup_sqltable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage_sink",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"filename": {
+				"type": "string",
+				"defaultValue": "Table_Source_SQL.json"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().filename",
+					"type": "Expression"
+				},
+				"fileSystem": "manualfile"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"tablename_source": {
+					"type": "string"
+				},
+				"filename_sink": {
+					"type": "string"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
