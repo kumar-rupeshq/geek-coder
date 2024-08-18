@@ -1,23 +1,18 @@
 {
-	"name": "Binary_Sink",
+	"name": "Json_source_lookup_sqltable",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage_sink",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"container": {
-				"type": "string"
-			},
-			"dir": {
-				"type": "string"
-			},
 			"filename": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "Table_Source_SQL.json"
 			}
 		},
 		"annotations": [],
-		"type": "Binary",
+		"type": "Json",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
@@ -25,13 +20,17 @@
 					"value": "@dataset().filename",
 					"type": "Expression"
 				},
-				"folderPath": {
-					"value": "@dataset().dir",
-					"type": "Expression"
+				"fileSystem": "manualfile"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"tablename_source": {
+					"type": "string"
 				},
-				"fileSystem": {
-					"value": "@dataset().container",
-					"type": "Expression"
+				"filename_sink": {
+					"type": "string"
 				}
 			}
 		}

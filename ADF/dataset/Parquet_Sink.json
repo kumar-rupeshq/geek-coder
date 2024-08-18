@@ -1,40 +1,28 @@
 {
-	"name": "Binary_Sink",
+	"name": "Parquet_Sink",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage_sink",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"container": {
-				"type": "string"
-			},
-			"dir": {
-				"type": "string"
-			},
-			"filename": {
-				"type": "string"
-			}
-		},
 		"annotations": [],
-		"type": "Binary",
+		"type": "Parquet",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@dataset().filename",
+					"value": "@item().filename_sink",
 					"type": "Expression"
 				},
 				"folderPath": {
-					"value": "@dataset().dir",
+					"value": "@concat(item().tablename_source,'\\DatePart=',formatDateTime(utcNow(),'yyyy-MM-dd'))",
 					"type": "Expression"
 				},
-				"fileSystem": {
-					"value": "@dataset().container",
-					"type": "Expression"
-				}
-			}
-		}
+				"fileSystem": "raw"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"
 }

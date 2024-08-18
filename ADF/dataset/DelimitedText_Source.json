@@ -1,8 +1,8 @@
 {
-	"name": "DelimitedText_sink",
+	"name": "DelimitedText_Source",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureDataLakeStorage_sink",
+			"referenceName": "AzureDataLakeStorage_Source",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {

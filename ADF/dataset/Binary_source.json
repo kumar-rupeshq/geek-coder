@@ -2,7 +2,7 @@
 	"name": "Binary_source",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureDataLakesource_linkservice",
+			"referenceName": "AzureDataLakeStorage_Source",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {

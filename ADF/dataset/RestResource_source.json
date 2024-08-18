@@ -1,25 +1,24 @@
 {
-	"name": "AzureSqlTable_source",
+	"name": "RestResource_source",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureSqlDatabase_source",
+			"referenceName": "RestService_source",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"tablename": {
+			"url": {
 				"type": "string"
 			}
 		},
 		"annotations": [],
-		"type": "AzureSqlTable",
-		"schema": [],
+		"type": "RestResource",
 		"typeProperties": {
-			"schema": "dbo",
-			"table": {
-				"value": "@dataset().tablename",
+			"relativeUrl": {
+				"value": "@dataset().url",
 				"type": "Expression"
 			}
-		}
+		},
+		"schema": []
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"
 }
