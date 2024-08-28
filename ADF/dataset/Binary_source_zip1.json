@@ -1,0 +1,33 @@
+{
+	"name": "Binary_source_zip1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage_Source",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"container": {
+				"type": "string"
+			},
+			"dir": {
+				"type": "string"
+			},
+			"filename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "flights.zip",
+				"fileSystem": "flight"
+			},
+			"compression": {
+				"type": "ZipDeflate",
+				"level": "Optimal"
+			}
+		}
+	}
+}
