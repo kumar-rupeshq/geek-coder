@@ -87,7 +87,7 @@
 													"type": "BinaryReadSettings",
 													"compressionProperties": {
 														"type": "ZipDeflateReadSettings",
-														"preserveZipFileNameAsFolder": true
+														"preserveZipFileNameAsFolder": false
 													}
 												}
 											},
