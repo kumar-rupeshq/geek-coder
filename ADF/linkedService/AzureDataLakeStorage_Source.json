@@ -1,6 +1,5 @@
 {
 	"name": "AzureDataLakeStorage_Source",
-	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"annotations": [],
 		"type": "AzureBlobFS",
@@ -18,5 +17,6 @@
 				"secretName": "data-app-secret"
 			}
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
 }
