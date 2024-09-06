@@ -14,7 +14,7 @@
 					"referenceName": "AzureKeyVault1",
 					"type": "LinkedServiceReference"
 				},
-				"secretName": "data-app-secret"
+				"secretName": "spn-client-secret"
 			}
 		}
 	},
