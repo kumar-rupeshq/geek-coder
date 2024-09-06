@@ -28,7 +28,10 @@
 					},
 					"dataset": {
 						"referenceName": "Json_source_lookup_sqltable",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"filename": "Table_Source_SQL.json"
+						}
 					},
 					"firstRowOnly": false
 				}
