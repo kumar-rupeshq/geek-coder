@@ -1,11 +1,10 @@
 {
 	"name": "AzureSqlDatabase_source",
-	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"annotations": [],
 		"type": "AzureSqlDatabase",
 		"typeProperties": {
-			"server": "gcodersdev0001.database.windows.net",
+			"server": "geekcoders-dev-sql-db-server.database.windows.net",
 			"database": "gcoderssourcesqldb_0001",
 			"encrypt": "mandatory",
 			"trustServerCertificate": false,
@@ -17,8 +16,9 @@
 					"referenceName": "AzureKeyVault1",
 					"type": "LinkedServiceReference"
 				},
-				"secretName": "database-password-source"
+				"secretName": "sql-server-password"
 			}
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
 }
