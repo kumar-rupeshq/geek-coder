@@ -5,7 +5,7 @@
 		"type": "AzureSqlDatabase",
 		"typeProperties": {
 			"server": "geekcoders-dev-sql-db-server.database.windows.net",
-			"database": "gcoderssourcesqldb_0001",
+			"database": "geekcoders-dev-sql-db",
 			"encrypt": "mandatory",
 			"trustServerCertificate": false,
 			"authenticationType": "SQL",
